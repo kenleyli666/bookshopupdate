@@ -7,7 +7,7 @@ import '../../app/globals.css';
 import { Typography, Container, Grid, Card, CardContent, CardMedia, Button } from '@mui/material';
 import Header from './components/header';
 import Footer from './components/footer';
-import Register from './register/register';
+import Register from './account/register';
 import BookFilter from './components/BookFilter';
 
 export default function Home() {
