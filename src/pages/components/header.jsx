@@ -17,18 +17,18 @@ export default function Navbar() {
                     </Link>
                 </Typography>
                 
-                <Button color="inherit" onClick={() => router.push('../orders/orders')}>
+                <Button color="inherit" onClick={() => router.push('../checkout/orders')}>
                     我的訂單
                 </Button>
-                <IconButton color="inherit" onClick={() => router.push('../cart/cart')}>
+                <IconButton color="inherit" onClick={() => router.push('../checkout/cart')}>
                     <Badge badgeContent={cartItemsCount} color="error">
                         <ShoppingCartIcon />
                     </Badge>
                 </IconButton>
-                <Button color="inherit" onClick={() => router.push('../register/login')}>
+                <Button color="inherit" onClick={() => router.push('../account/login')}>
                     登錄
                 </Button>
-                <Button color="inherit" onClick={() => router.push('../register/register')}>
+                <Button color="inherit" onClick={() => router.push('../account/register')}>
                     註冊
                 </Button>
                 <Button color="inherit" onClick={() => router.push('../aboutus')}>
