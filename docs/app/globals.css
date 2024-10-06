@@ -1,0 +1,52 @@
+/* globals.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  /* width: 100%; */
+  outline: none;
+  box-sizing: border-box;
+  list-style-type: none;
+  text-decoration: none;
+}
+
+*:hover {
+  transition: all 0.5s ease-in-out;
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: var(--font-geist-sans), Helvetica, sans-serif;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+.orange-mode {
+  transition: background 10s ease-in-out, color 5s ease-in-out;
+}
+
+.orange-mode:hover {
+  background: orange;
+  color: blue;
+  transition: 5s ease-in;
+}
