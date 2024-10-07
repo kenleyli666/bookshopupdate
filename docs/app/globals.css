@@ -61,5 +61,5 @@ a:hover {
 .orange-mode:hover {
   background: orange;
   color: blue;
-  transition: background 5s ease-in, color 5s ease-in; /* 指定过渡属性 */
+  transition: background 5s ease-in, color 5s ease-in;
 }
