@@ -6,6 +6,7 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --transition-duration: 0.5s;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -16,23 +17,35 @@
 }
 
 * {
-  padding: 0;
-  margin: 0;
-  /* width: 100%; */
   outline: none;
   box-sizing: border-box;
-  list-style-type: none;
-  text-decoration: none;
+  margin: 0; 
+  padding: 0; 
 }
 
-*:hover {
-  transition: all 0.5s ease-in-out;
-}
-
+html, 
 body {
   color: var(--foreground);
   background: var(--background);
   font-family: var(--font-geist-sans), Helvetica, sans-serif;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+*:hover {
+  transition: all var(--transition-duration) ease-in-out;
+}
+
+a {
+  text-decoration: none;
+  transition: orange var(--transition-duration); 
+}
+
+a:hover {
+  text-decoration: underline;
 }
 
 @layer utilities {
@@ -48,5 +61,5 @@ body {
 .orange-mode:hover {
   background: orange;
   color: blue;
-  transition: 5s ease-in;
+  transition: background 5s ease-in, color 5s ease-in; /* 指定过渡属性 */
 }
