@@ -1,0 +1,108 @@
+/* globals.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+  --transition-duration: 0.3s;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+* {
+  outline: none;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: var(--font-geist-sans), Helvetica, sans-serif;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+*:hover {
+  transition: all var(--transition-duration) ease-in-out;
+}
+
+a {
+  text-decoration: none;
+  transition: orange var(--transition-duration);
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+.orange-mode {
+  transition: background 10s ease-in-out, color 5s ease-in-out;
+}
+
+.orange-mode:hover {
+  background: orange;
+  color: blue;
+  transition: background 5s ease-in, color 5s ease-in;
+}
+
+.hotbooks{
+  border: 5px solid orange;
+}
+
+.circle {
+  align-items: center;
+  background-color: orangered;
+  border-radius: 50%;
+  color: #FFF;
+  display: flex;
+  flex-direction: column;
+  height: 20vh;
+  justify-content: center;
+  width: 20vh;
+  animation: roll 15s linear infinite;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  margin-top: 0.5rem;
+}
+
+@keyframes roll {
+  0% {
+    transform: translateX(0) rotate(0deg);
+  }
+  100% {
+    transform: translateX(100vw) rotate(360deg);
+  }
+}
+
+.circle h1, .circle h2 {
+  font-weight: 800;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  animation: rotateText 10s linear infinite;
+}
+
+@keyframes rotateText {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-360deg);
+  }
+}
